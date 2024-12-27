@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #1E88E5; /* Sleek blue */
+    --secondary-color: #1565C0; /* Darker blue */
+    --accent1-color: #BBDEFB; /* Light blue */
+    --accent2-color: #E3F2FD; /* Lighter blue */
+    --accent3-color: #FFFFFF; /* White */
+    --text-color: #212121; /* Dark gray for text */
+}
+
+html, body {
+    height: 98%; /* Full-page height */
+    margin: 0; /* Removes default margins */
+    font-family: 'Roboto', sans-serif; /* Clean font */
+    color: var(--text-color);
+    background: var(--accent2-color); /* Subtle light background */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-buttons {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: var(--primary-color);
+    color: var(--accent3-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--accent3-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 70vh; /* Limit height of the form */
+    overflow-y: auto; /* Allow scrolling if content exceeds the max height */
+}
+
+input {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--accent2-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#acntPage {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    background: var(--primary-color);
+    color: var(--accent3-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkbox {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Vertically align items */
+    padding: 0;
+    width: 3%;
+    font-size: 12px;
+}
+
+#checkbox input {
+    margin-right: 90%; /* Remove any extra margins */
+    width: 100%;
+}
+
+#checkbox p {
+    display: inline;
+}

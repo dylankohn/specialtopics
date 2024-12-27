@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="acntStyles.css">
+</head>
+<body>
+    <h1>Construction Management</h1>
+    <form id="createAcnt" action="/api/register" method="POST">
+        <title>Username</title>
+        <input type="text" name="username" id="username" placeholder="Create Username">
+        <title>Password</title>
+        <input type="password" name="password" id="password" placeholder="Create Password" oninput="checkPasswordStrength()">
+        <div id="strengthMessage" class="strength"></div>
+        <p id="requirements">Please include at least 8 characters, uppercase letter, lowercase letter, number, and special character</p>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" oninput="checkMatchingPasswords()">
+        <div id="confirmMessage" class="confirmpasswords"></div>
+        <button id="createAcntBtn" class="main-buttons">Create Account</button>
+    </form>
+    <button id="loginPage">Log In</button>
+    <script>
+        document.getElementById("loginPage").addEventListener("click", function() {
+            window.location.href = "http://localhost:3000/index.html"; // Change this to your desired URL
+        });
+    </script>
+    <script src="createAcnt.js"></script>
+</body>
+</html>

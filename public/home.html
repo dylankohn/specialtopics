@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="construction.css">
+    <title>Construction</title>
+</head>
+<body>
+    <div id="job-list">
+        <ul id="jobs">
+            
+        </ul>
+    </div>
+    <button id="addjobBtn">Add New job</button><br>
+    <div id="addjobForm" style="display: none;">
+        <input type="text" id="jobName" placeholder="Enter job name">
+        <input type="date" id="jobStart" placeholder="Enter start date">
+        <input type="date" id="jobEnd" placeholder="Enter end date">
+        <select name="customers" id="customers">
+            <option value="">Select Customer</option>
+        </select>
+        <button id="submitjobBtn">Submit</button>
+    </div>
+    <button id="rmvjobBtn">Remove Job</button>
+    <div id="rmvjobForm" style="display: none;">
+        <input type="text" id="removeJobName" placeholder="Enter job name">
+        <button id="confirmjobBtn">Remove</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="fetchJobs.js"></script>
+    <script src="addJob.js"></script>
+    <script src="removeJob.js"></script>
+    <script src="fetchCustomers.js"></script>
+    <script src="addMat.js"></script>
+    <script>
+        // Fetch jobs and customers when the page loads
+        fetchJobs();
+        fetchCustomers();
+    </script>
+</body>
+</html>
